@@ -7,10 +7,6 @@
       <div>
         <p class="text-xs">&copy; 2024 Baslael Workineh. All rights reserved.</p>
       </div>
-      <div class="mt-4">
-        <a href="https://www.linkedin.com/in/baslael-workineh" class="text-sm text-blue-400 hover:underline">LinkedIn</a> |
-        <a href="https://github.com/baslael" class="text-sm text-blue-400 hover:underline">GitHub</a>
-      </div>
     </footer>
   </template>
   
