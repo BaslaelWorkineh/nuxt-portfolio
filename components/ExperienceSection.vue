@@ -65,13 +65,13 @@ export default {
         organization: "SingularityNET",
         position: "Software Engineer",
         startYear: "2024",
-        description: "Developing decentralized AI solutions.",
+        description: "Developing Compoenents for AGI development.",
       },
       {
         organization: "iCog Labs",
         position: "Junior Software Engineer",
         startYear: "2024",
-        description: "Worked on AI and blockchain integrations.",
+        description: "Working as a Software developer.",
       },
     ]);
 
