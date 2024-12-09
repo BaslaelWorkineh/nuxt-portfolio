@@ -50,16 +50,10 @@ export default {
   setup() {
     const experiences = reactive([
       {
-        organization: "SingularityNET",
-        position: "Software Engineer",
-        startYear: "2024",
-        description: "Developing decentralized AI solutions.",
-      },
-      {
-        organization: "iCog Labs",
-        position: "Junior Software Engineer",
-        startYear: "2023",
-        description: "Worked on AI and blockchain integrations.",
+        organization: "JarsoAI",
+        position: "Frontend Developer",
+        startYear: "2022",
+        description: "Built scalable web solutions for schools.",
       },
       {
         organization: "HelloHome",
@@ -68,10 +62,16 @@ export default {
         description: "Built scalable mobile solutions for real estate.",
       },
       {
-        organization: "JarsoAI",
-        position: "Frontend Developer",
-        startYear: "2022",
-        description: "Built scalable web solutions for schools.",
+        organization: "SingularityNET",
+        position: "Software Engineer",
+        startYear: "2024",
+        description: "Developing decentralized AI solutions.",
+      },
+      {
+        organization: "iCog Labs",
+        position: "Junior Software Engineer",
+        startYear: "2024",
+        description: "Worked on AI and blockchain integrations.",
       },
     ]);
 
@@ -90,6 +90,20 @@ export default {
 
 .hover\:scale-102:hover {
   transform: scale(1.02);
+}
+
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 209, 255, 0.1);
+  letter-spacing: 0.5rem;
+  white-space: nowrap;
+  z-index: 0;
 }
 
 @keyframes heartbeat {
