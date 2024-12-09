@@ -21,34 +21,11 @@
             <p class="description">I'm a Full-Stack Developer dedicated to crafting seamless and efficient web
                 applications.</p>
 
-            <!-- Tech Stack Section -->
-            <div class="tech-stack">
-                <div class="tech-icons">
-                    <div class="tech-icon">
-                        <svg class="nuxt-icon" viewBox="0 0 124 124" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M55.7498 27.1551C52.5277 21.615 44.4723 21.615 41.2502 27.1551L6.13404 87.5347C2.91195 93.0748 6.93963 100 13.3838 100H83.6162C90.0604 100 94.0881 93.0748 90.866 87.5347L55.7498 27.1551Z"
-                                fill="#00DC82" />
-                        </svg>
-                    </div>
-                    <div class="tech-icon">
-                        <svg class="tailwind-icon" viewBox="0 0 54 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M27 0C19.8 0 15.3 3.6 13.5 10.8C16.2 7.2 19.35 5.85 22.95 6.75C25.004 7.263 26.472 8.754 28.097 10.403C30.744 13.09 33.808 16.2 40.5 16.2C47.7 16.2 52.2 12.6 54 5.4C51.3 9 48.15 10.35 44.55 9.45C42.496 8.937 41.028 7.446 39.403 5.797C36.756 3.11 33.692 0 27 0ZM13.5 16.2C6.3 16.2 1.8 19.8 0 27C2.7 23.4 5.85 22.05 9.45 22.95C11.504 23.463 12.972 24.954 14.597 26.603C17.244 29.29 20.308 32.4 27 32.4C34.2 32.4 38.7 28.8 40.5 21.6C37.8 25.2 34.65 26.55 31.05 25.65C28.996 25.137 27.528 23.646 25.903 21.997C23.256 19.31 20.192 16.2 13.5 16.2Z"
-                                fill="#38BDF8" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
             <div class="cta-buttons">
                 <button class="primary-btn" @click="scrollToProjects">View Projects</button>
                 <button class="secondary-btn" @click="contactMe">Contact Me</button>
             </div>
 
-
-
-            <!-- Social Media Links -->
             <div class="social-links">
                 <a href="https://github.com/BaslaelWorkineh" class="social-icon" title="GitHub">
                     <i class="fab fa-github"></i>
@@ -68,15 +45,9 @@
                 </a>
             </div>
         </div>
-
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <div class="arrow"></div>
-        </div>
     </section>
 </template>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syncopate:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
@@ -301,4 +272,5 @@ export default {
         }
     }
 };
+
 </script>
