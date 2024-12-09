@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <a :href="liveDemo" target="_blank" class="demo-btn">
+                    <a :href="selectedProject.liveDemo" target="_blank" class="demo-btn">
                         <i class="fas fa-external-link-alt"></i> Live Demo
                     </a>
                     <a :href="selectedProject.github" target="_blank" class="github-btn">
