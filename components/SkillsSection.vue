@@ -32,7 +32,7 @@
   'Frontend Development': [
     { name: 'Vue.js', level: 90, icon: 'fab fa-vuejs' },
     { name: 'Nuxt.js', level: 85, icon: 'fab fa-n' },
-    { name: 'Next.js', level: 90, icon: 'fab fa-next' },
+    { name: 'Next.js', level: 90, icon: 'fab fa-n' },
     { name: 'React', level: 95, icon: 'fab fa-react' },
     { name: 'React Native', level: 90, icon: 'fab fa-react' },
     { name: 'TailwindCSS', level: 85, icon: 'fas fa-wind' },
