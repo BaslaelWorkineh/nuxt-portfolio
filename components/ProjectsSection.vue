@@ -81,8 +81,8 @@ const projects = [
             "Streamlined hiring process"
         ],
         challenges: "Ensuring seamless real-time updates and scalability across multiple users.",
-        liveDemo: "https://demo-link.com",
-        github: "https://github.com/username/hello-home"
+        liveDemo: "https://play.google.com/store/apps/details?id=com.jarsoai.hellohome",
+        github: "private"
     },
     {
         id: 2,
@@ -96,8 +96,8 @@ const projects = [
             "Responsive design"
         ],
         challenges: "Integrating a flexible CMS for content management.",
-        liveDemo: "https://demo-link.com",
-        github: "https://github.com/username/habeantech"
+        liveDemo: "https://habean-tech-sandy.vercel.app/#contact",
+        github: "private"
     },
     {
         id: 3,
@@ -112,8 +112,8 @@ const projects = [
             "Refactor support"
         ],
         challenges: "Developing comprehensive functionality to support various coding tasks for the MeTTa language.",
-        liveDemo: "https://demo-link.com",
-        github: "https://github.com/username/meTTa-vscode-extension"
+        liveDemo: "https://marketplace.visualstudio.com/items?itemName=BaslaelWorkinehAyele.metta-formatter-highlighter",
+        github: "https://github.com/BaslaelWorkineh/MeTTa_vscode_extension"
     },
     {
         id: 4,
@@ -127,8 +127,8 @@ const projects = [
             "GeminiEmbeddingFunction integration"
         ],
         challenges: "Handling large volumes of chat data and optimizing the AI model for accurate responses.",
-        liveDemo: "https://demo-link.com",
-        github: "https://github.com/username/rag-based-chatbot"
+        liveDemo: "https://github.com/BaslaelWorkineh/RAG_on_TelegramChatData",
+        github: "https://github.com/BaslaelWorkineh/RAG_on_TelegramChatData"
     },
     {
         id: 5,
@@ -142,8 +142,8 @@ const projects = [
             "Predictive power from trained models"
         ],
         challenges: "Ensuring the platform is intuitive for no-coders while maintaining performance for large datasets.",
-        liveDemo: "https://demo-link.com",
-        github: "https://github.com/username/ml-no-code"
+        liveDemo: "ml-nocode.vercel.app",
+        github: "https://github.com/BaslaelWorkineh/ML-with-GUI"
     },
     {
         id: 6,
@@ -158,8 +158,8 @@ const projects = [
             "Kill leaderboard"
         ],
         challenges: "Ensuring synchronization of multiplayer mechanics across various devices and network conditions.",
-        liveDemo: "https://demo-link.com",
-        github: "https://github.com/username/mobile-multiplayer-tps"
+        liveDemo: "https://www.youtube.com/watch?v=ZVfKeEiKNo0&t=12s&ab_channel=MrBasketo3DGame",
+        github: "https://github.com/BaslaelWorkineh/3rd-Person-Multiplayer-Starter-Unity-Asset-"
     },
     {
         id: 7,
@@ -173,26 +173,11 @@ const projects = [
             "Daily routines and survival dynamics"
         ],
         challenges: "Creating realistic AI behaviors for wildlife and optimizing performance.",
-        liveDemo: "https://demo-link.com",
-        github: "https://github.com/username/wild-life-simulation"
+        liveDemo: "https://www.youtube.com/watch?v=lFQmcj_tWio&t=71s",
+        // github: "https://github.com/username/wild-life-simulation"
     },
     {
         id: 8,
-        title: "ፌደራል/FEDERAL: A 3D Mobile Game",
-        shortDescription: "A 3D game featuring missions set in Hawassa University",
-        fullDescription: "A 3D mobile game developed with my brother that features various missions and is set using a model of Hawassa University.",
-        technologies: ["Blender"],
-        features: [
-            "Mission-based gameplay",
-            "Realistic 3D model of Hawassa University",
-            "Engaging mobile game mechanics"
-        ],
-        challenges: "Creating detailed 3D models and designing interactive gameplay for mobile.",
-        liveDemo: "https://demo-link.com",
-        github: "https://github.com/username/federal-3d-game"
-    },
-    {
-        id: 9,
         title: "Motor Bike Physics Using C#",
         shortDescription: "A sophisticated motorbike controller for Unity",
         fullDescription: "A motorbike controller crafted with C# and Blender to enhance the riding experience for motorcycle enthusiasts.",
@@ -202,11 +187,11 @@ const projects = [
             "Smooth riding experience"
         ],
         challenges: "Designing a realistic motorbike controller that simulates real-world physics.",
-        liveDemo: "https://demo-link.com",
-        github: "https://github.com/username/motorbike-physics"
+        liveDemo: "https://www.youtube.com/watch?v=sYftUpn_LZY",
+        github: "https://github.com/BaslaelWorkineh/Unity-3d-Motorbike-Controller"
     },
     {
-        id: 10,
+        id: 9,
         title: "Slash Dash",
         shortDescription: "A 2D game developed in 2 days",
         fullDescription: "A game developed in just two days as part of a challenge, using Unity and C# to create a captivating 2D game.",
@@ -216,8 +201,8 @@ const projects = [
             "Challenging mechanics"
         ],
         challenges: "Completing the game within a strict 2-day timeframe while maintaining gameplay quality.",
-        liveDemo: "https://demo-link.com",
-        github: "https://github.com/username/slash-dash"
+        liveDemo: "https://github.com/BaslaelWorkineh/Slash-Dash_source-code-MyGame",
+        github: "https://github.com/BaslaelWorkineh/Slash-Dash_source-code-MyGame"
     }
 ];
 
