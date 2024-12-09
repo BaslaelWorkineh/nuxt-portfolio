@@ -74,7 +74,7 @@ const projects = [
         title: "ML No-Code",
         shortDescription: "A platform for no-coders to train models",
         fullDescription: "A project that allows users to input their data and train machine learning models with predictive power and visualization.",
-        technologies: ["Nuxt 3", "Scikit-learn"],
+        technologies: ["Nuxt 3","Tailwind", "Django", "Scikit-learn"],
         features: [
             "No-code interface for training models",
             "Visualization of model performance",
@@ -166,7 +166,7 @@ const projects = [
         title: "Wild Life Simulation",
         shortDescription: "A simulation showcasing the beauty of wildlife",
         fullDescription: "A simulation where foxes and sheep engage in a lifelike routine driven by their basic instincts, including eating, drinking, sleeping, and survival interactions.",
-        technologies: ["HTML", "CSS", "JavaScript", "MongoDB", "Express", "React", "Node.js"],
+        technologies: ["Unity 3D", "C#", "Blender"],
         features: [
             "Lifelike animal behaviors",
             "Foxes and sheep interactions",
