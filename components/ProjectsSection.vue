@@ -81,7 +81,7 @@ const projects = [
             "Predictive power from trained models"
         ],
         challenges: "Ensuring the platform is intuitive for no-coders while maintaining performance for large datasets.",
-        liveDemo: "ml-nocode.vercel.app",
+        liveDemo: "https://ml-nocode.vercel.app",
         github: "https://github.com/BaslaelWorkineh/ML-with-GUI"
     },
     {
@@ -325,7 +325,6 @@ const closeModal = () => {
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    padding: 2rem;
 }
 
 .modal-content {
@@ -386,6 +385,7 @@ const closeModal = () => {
 .project-features,
 .project-challenges {
     margin-bottom: 2rem;
+    color: #a0a0a0;
 }
 
 .project-features h4,

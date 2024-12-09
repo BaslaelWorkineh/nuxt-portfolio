@@ -9,7 +9,8 @@
         <div
           v-for="(experience, index) in experiences"
           :key="index"
-          class="relative pl-8 sm:pl-32 py-6 group fade-in-top"
+          class="relative pl-8 sm:pl-32 py-6 group"
+          :class="{ 'fade-in-top': index === 0 }"
         >
           <!-- Organization label -->
           <div class="font-caveat font-medium text-lg md:text-2xl px-1 gradient-text mb-1 sm:mb-0">
@@ -17,8 +18,9 @@
           </div>
           <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
           <div
-            class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gradient-to-b before:from-[#00D1FF] before:to-[#0084FF]/20 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 before:rotate-180 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-gradient-to-br after:from-[#00D1FF] after:to-[#0084FF] after:border-4 after:box-content after:border-[#00D1FF]/30 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
-          >
+  class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:w-[1px] before:bg-gradient-to-b before:from-[#00D1FF] before:to-[#0084FF] sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 before:rotate-180 after:absolute after:left-2 sm:after:left-0 after:w-3 after:h-3 after:bg-gradient-to-br after:from-[#00D1FF] after:to-[#0084FF] after:border-4 after:box-content after:border-[#00D1FF]/30 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
+>
+
             <time
               class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 gradient-text bg-[#00D1FF]/10 border border-[#00D1FF]/20 rounded-full hover:border-[#00D1FF]/40 transition-all duration-300"
             >
@@ -36,9 +38,9 @@
           </div>
         </div>
         <!-- Last Node -->
-        <div class="relative pl-8 sm:pl-32 py-10 group">
+        <div class="relative pl-8 sm:pl-32 py-14 group">
           <div
-            class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:px-px sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 before:rotate-180 after:absolute after:left-2 sm:after:left-0 after:w-3 after:h-3 after:bg-gradient-to-br after:from-[#00D1FF] after:to-[#0084FF] after:border-4 after:box-content after:border-[#00D1FF]/40 after:animate-heartbeat after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
+            class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:px-px sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-3 after:h-3 after:bg-gradient-to-br after:from-[#00D1FF] after:to-[#0084FF] after:border-4 after:box-content after:border-[#00D1FF]/40 after:animate-heartbeat after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
           ></div>
         </div>
       </div>
@@ -92,23 +94,23 @@ export default {
   -webkit-text-fill-color: transparent;
 }
 
+.hover\:scale-102:hover {
+  transform: scale(1.02);
+}
+
 @keyframes heartbeat {
-  0% {
-    transform: scale(1);
+  0%, 100% {
+    transform: scale(1) translate(-50%, 6px);
+    opacity: 1;
   }
-  30% {
-    transform: scale(1.2);
-  }
-  60% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1);
+  50% {
+    transform: scale(1.1) translate(-45%, 6px);
+    opacity: 0.8;
   }
 }
 
 .animate-heartbeat {
-  animation: heartbeat 1.5s infinite;
+  animation: heartbeat 2s ease-in-out infinite;
 }
 
 @keyframes fadeInTop {
@@ -124,11 +126,6 @@ export default {
 
 .fade-in-top {
   animation: fadeInTop 0.6s ease-out forwards;
-}
-
-/* Rotate line downwards */
-.before\:rotate-180::before {
-  transform: rotate(180deg);
 }
 
 /* Hover effects for timeline nodes */
