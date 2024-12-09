@@ -71,6 +71,21 @@ const selectedProject = ref(null);
 const projects = [
     {
         id: 1,
+        title: "ML No-Code",
+        shortDescription: "A platform for no-coders to train models",
+        fullDescription: "A project that allows users to input their data and train machine learning models with predictive power and visualization.",
+        technologies: ["Nuxt 3", "Scikit-learn"],
+        features: [
+            "No-code interface for training models",
+            "Visualization of model performance",
+            "Predictive power from trained models"
+        ],
+        challenges: "Ensuring the platform is intuitive for no-coders while maintaining performance for large datasets.",
+        liveDemo: "ml-nocode.vercel.app",
+        github: "https://github.com/BaslaelWorkineh/ML-with-GUI"
+    },
+    {
+        id: 2,
         title: "HelloHome",
         shortDescription: "Connecting employers with employees",
         fullDescription: "A mobile app that streamlines the hiring process by connecting job seekers with employers, making it efficient and effective for both parties.",
@@ -82,10 +97,10 @@ const projects = [
         ],
         challenges: "Ensuring seamless real-time updates and scalability across multiple users.",
         liveDemo: "https://play.google.com/store/apps/details?id=com.jarsoai.hellohome",
-        github: "private"
+        // github: "private"
     },
     {
-        id: 2,
+        id: 3,
         title: "HabeanTech",
         shortDescription: "Website for showcasing a startup idea",
         fullDescription: "A website that showcases a startup's idea and includes an article page with Sanity as the CMS.",
@@ -97,10 +112,10 @@ const projects = [
         ],
         challenges: "Integrating a flexible CMS for content management.",
         liveDemo: "https://habean-tech-sandy.vercel.app/#contact",
-        github: "private"
+        // github: "private"
     },
     {
-        id: 3,
+        id: 4,
         title: "VS-Code Extension for MeTTa Language",
         shortDescription: "The most downloaded extension for the MeTTa language",
         fullDescription: "A VS-Code extension for the MeTTa language, offering features like code snippets, formatting, highlighting, and more for AGI research.",
@@ -116,7 +131,7 @@ const projects = [
         github: "https://github.com/BaslaelWorkineh/MeTTa_vscode_extension"
     },
     {
-        id: 4,
+        id: 5,
         title: "RAG-Based AI Chatbot",
         shortDescription: "Extracts Telegram chat data for Q&A using RAG",
         fullDescription: "A website that extracts Telegram chat and uses it as input data for a RAG-based AI chatbot. Optimized using custom chunking methods for better results.",
@@ -129,21 +144,6 @@ const projects = [
         challenges: "Handling large volumes of chat data and optimizing the AI model for accurate responses.",
         liveDemo: "https://github.com/BaslaelWorkineh/RAG_on_TelegramChatData",
         github: "https://github.com/BaslaelWorkineh/RAG_on_TelegramChatData"
-    },
-    {
-        id: 5,
-        title: "ML No-Code",
-        shortDescription: "A platform for no-coders to train models",
-        fullDescription: "A project that allows users to input their data and train machine learning models with predictive power and visualization.",
-        technologies: ["Nuxt 3", "Scikit-learn"],
-        features: [
-            "No-code interface for training models",
-            "Visualization of model performance",
-            "Predictive power from trained models"
-        ],
-        challenges: "Ensuring the platform is intuitive for no-coders while maintaining performance for large datasets.",
-        liveDemo: "ml-nocode.vercel.app",
-        github: "https://github.com/BaslaelWorkineh/ML-with-GUI"
     },
     {
         id: 6,
