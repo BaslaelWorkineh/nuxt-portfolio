@@ -69,7 +69,7 @@ export default {
       },
       {
         organization: "iCog Labs",
-        position: "Junior Software Engineer",
+        position: "Software Engineer",
         startYear: "2024",
         description: "Working as a Software developer.",
       },
