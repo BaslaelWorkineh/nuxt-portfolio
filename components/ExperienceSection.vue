@@ -1,276 +1,150 @@
 <template>
-    <section class="experience-section">
-      <div class="section-header">
-        <h2 class="section-title">Professional Experience</h2>
-      </div>
-      <div class="timeline">
-        <div v-for="(job, index) in jobs" 
-             :key="index" 
-             class="timeline-item"
-             v-motion
-             :initial="{ opacity: 0, y: 50 }"
-             :visibleOnce="{ opacity: 1, y: 0 }"
-             :delay="index * 200">
-          <div class="timeline-content">
-            <div class="timeline-point" :class="{ 'active': isHovered === index }" />
-            <div class="job-info" 
-                 @mouseenter="isHovered = index"
-                 @mouseleave="isHovered = null">
-              <div class="job-details">
-                <h3 class="job-title">{{ job.title }}</h3>
-                <p class="company-name">{{ job.company }}</p>
-                <p class="job-duration">{{ job.duration }}</p>
-                <p class="job-location">
-                  <i class="fas fa-map-marker-alt"></i>
-                  {{ job.location }}
-                </p>
-              </div>
+  <div class="min-h-screen w-full py-20 bg-gradient" style="background: linear-gradient(135deg, #0a0b0f 0%, #141922 100%);">
+    <div class="container mx-auto max-w-4xl">
+      <h1 class="text-3xl md:text-4xl px-4 mb-12 text-center font-bold gradient-text">
+        Experiences
+      </h1>
+      <div class="px-4 md:px-10">
+        <!-- Items -->
+        <div
+          v-for="(experience, index) in experiences"
+          :key="index"
+          class="relative pl-8 sm:pl-32 py-6 group fade-in-top"
+        >
+          <!-- Organization label -->
+          <div class="font-caveat font-medium text-lg md:text-2xl px-1 gradient-text mb-1 sm:mb-0">
+            {{ experience.organization }}
+          </div>
+          <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+          <div
+            class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gradient-to-b before:from-[#00D1FF] before:to-[#0084FF]/20 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 before:rotate-180 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-gradient-to-br after:from-[#00D1FF] after:to-[#0084FF] after:border-4 after:box-content after:border-[#00D1FF]/30 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
+          >
+            <time
+              class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 gradient-text bg-[#00D1FF]/10 border border-[#00D1FF]/20 rounded-full hover:border-[#00D1FF]/40 transition-all duration-300"
+            >
+              {{ experience.startYear }}
+            </time>
+            <div
+              class="text-[18px] md:text-[24px] font-bold text-stone-300 px-1 hover:gradient-text transition-all duration-300"
+            >
+              {{ experience.position }}
             </div>
           </div>
-          <div v-if="index !== jobs.length - 1" 
-               class="line"
-               :class="{ 'active': isHovered === index }" />
+          <!-- Content -->
+          <div class="text-stone-400 px-2 font-light leading-relaxed hover:text-stone-300 transition-all duration-300">
+            {{ experience.description }}
+          </div>
+        </div>
+        <!-- Last Node -->
+        <div class="relative pl-8 sm:pl-32 py-10 group">
+          <div
+            class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:px-px sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 before:rotate-180 after:absolute after:left-2 sm:after:left-0 after:w-3 after:h-3 after:bg-gradient-to-br after:from-[#00D1FF] after:to-[#0084FF] after:border-4 after:box-content after:border-[#00D1FF]/40 after:animate-heartbeat after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
+          ></div>
         </div>
       </div>
-    </section>
-  </template>
-  
-  <script setup>
-  import { ref } from 'vue';
-  
-  const isHovered = ref(null);
-  
-  const jobs = [
-    {
-      logo: '/assets/singularity-logo.png',
-      title: 'Software Engineer',
-      company: 'SingularityNET',
-      duration: 'Aug 2024 - Present · 5 mos',
-      location: 'Remote',
-    },
-    {
-      logo: '/assets/icog-logo.png',
-      title: 'Junior Software Engineer',
-      company: 'iCog Labs',
-      duration: 'Jul 2024 - Present · 6 mos',
-      location: 'Ethiopia',
-    },
-    {
-      logo: '/assets/hello-home-logo.png',
-      title: 'Mobile Application Developer',
-      company: 'HelloHome',
-      duration: 'May 2024 - Jul 2024 · 3 mos',
-      location: 'Ethiopia · Remote',
-    },
-    {
-      logo: '/assets/jarsoai-logo.png',
-      title: 'Data Analyst',
-      company: 'JarsoAI',
-      duration: 'Nov 2021 - Aug 2022 · 10 mos',
-      location: 'Ethiopia',
-    },
-  ];
-  </script>
-  
-  <style scoped>
-  .experience-section {
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #0a0b0f 0%, #141922 100%);
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    </div>
+  </div>
+</template>
+
+<script>
+import { reactive } from "vue";
+
+export default {
+  name: "Experiences",
+  setup() {
+    const experiences = reactive([
+      {
+        organization: "SingularityNET",
+        position: "Software Engineer",
+        startYear: "2024",
+        description: "Developing decentralized AI solutions.",
+      },
+      {
+        organization: "iCog Labs",
+        position: "Junior Software Engineer",
+        startYear: "2023",
+        description: "Worked on AI and blockchain integrations.",
+      },
+      {
+        organization: "HelloHome",
+        position: "Mobile Application Developer",
+        startYear: "2022",
+        description: "Built scalable mobile solutions for real estate.",
+      },
+      {
+        organization: "JarsoAI",
+        position: "Frontend Developer",
+        startYear: "2022",
+        description: "Built scalable web solutions for schools.",
+      },
+    ]);
+
+    return { experiences };
+  },
+};
+</script>
+
+<style>
+.gradient-text {
+  background: linear-gradient(45deg, #00D1FF, #0084FF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
   }
-  
-  .section-header {
-    text-align: center;
-    margin-bottom: 4rem;
+  30% {
+    transform: scale(1.2);
   }
-  
-  .section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #00d1ff;
-    text-shadow: 0 0 10px rgba(0, 209, 255, 0.3);
-    position: relative;
+  60% {
+    transform: scale(1);
   }
-  
-  .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background-color: #00d1ff;
-    border-radius: 2px;
+  100% {
+    transform: scale(1);
   }
-  
-  .timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 800px;
-    width: 100%;
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .timeline-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    margin-bottom: 3rem;
-  }
-  
-  .timeline-content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    position: relative;
-  }
-  
-  .timeline-point {
-    width: 15px;
-    height: 15px;
-    background-color: #00d1ff;
-    border-radius: 50%;
-    position: absolute;
-    left: -25px;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
-  }
-  
-  .timeline-point.active {
-    transform: scale(1.5);
-    box-shadow: 0 0 20px rgba(0, 209, 255, 0.8);
-  }
-  
-  .job-info {
-    display: flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
-    border-radius: 10px;
-    width: 100%;
-    transition: all 0.3s ease;
-  }
-  
-  .job-info:hover {
-    transform: translateX(10px);
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .job-logo {
-    flex-shrink: 0;
-  }
-  
-  .job-logo img {
-    width: 60px;
-    height: 60px;
-    margin-right: 1.5rem;
-    border-radius: 8px;
-    object-fit: cover;
-    transition: all 0.3s ease;
-  }
-  
-  .job-info:hover .job-logo img {
-    transform: scale(1.1);
-  }
-  
-  .job-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  
-  .job-title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #00d1ff;
-    margin: 0;
-  }
-  
-  .company-name {
-    font-size: 1.1rem;
-    color: #ffffff;
-    margin: 0;
-  }
-  
-  .job-duration,
-  .job-location {
-    font-size: 0.9rem;
-    color: #a0a0a0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .line {
-    width: 2px;
-    height: 80px;
-    background-color: #00d1ff;
-    margin-top: 1rem;
-    transition: all 0.3s ease;
-    opacity: 0.5;
-  }
-  
-  .line.active {
+  100% {
     opacity: 1;
-    box-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
+    transform: translateY(0);
   }
-  
-  @media (max-width: 768px) {
-    .experience-section {
-      padding: 3rem 1rem;
-    }
-  
-    .section-title {
-      font-size: 2rem;
-    }
-  
-    .timeline-content {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .job-info {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 1rem;
-    }
-  
-    .job-logo {
-      margin-bottom: 1rem;
-    }
-  
-    .job-logo img {
-      width: 50px;
-      height: 50px;
-    }
-  
-    .timeline-point {
-      left: 50%;
-      transform: translateX(-50%);
-      top: -25px;
-    }
-  
-    .timeline-point.active {
-      transform: translateX(-50%) scale(1.5);
-    }
-  
-    .line {
-      width: 100%;
-      height: 2px;
-    }
-  
-    .job-info:hover {
-      transform: translateY(-5px);
-    }
-  }
-  </style>
+}
+
+.fade-in-top {
+  animation: fadeInTop 0.6s ease-out forwards;
+}
+
+/* Rotate line downwards */
+.before\:rotate-180::before {
+  transform: rotate(180deg);
+}
+
+/* Hover effects for timeline nodes */
+.group:hover .before\:bg-gradient-to-b::before {
+  opacity: 0.8;
+  box-shadow: 0 0 15px rgba(0, 209, 255, 0.3);
+}
+
+/* Glass effect for date badges */
+time {
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 10px rgba(0, 209, 255, 0.1);
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
+</style>

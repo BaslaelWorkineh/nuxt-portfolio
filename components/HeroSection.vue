@@ -42,9 +42,9 @@
             </div>
 
             <div class="cta-buttons">
-    <button class="primary-btn" @click="scrollToProjects">View Projects</button>
-    <button class="secondary-btn" @click="contactMe">Contact Me</button>
-</div>
+                <button class="primary-btn" @click="scrollToProjects">View Projects</button>
+                <button class="secondary-btn" @click="contactMe">Contact Me</button>
+            </div>
 
 
 
@@ -289,16 +289,16 @@
 
 <script>
 export default {
-  methods: {
-    scrollToProjects() {
-      const projectsSection = document.getElementById('projects-section');
-      if (projectsSection) {
-        projectsSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    },
-    contactMe() {
-      window.location.href = "mailto:baslaworku@gmail.com";
+    methods: {
+        scrollToProjects() {
+            const projectsSection = document.getElementById('projects-section');
+            if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        },
+        contactMe() {
+            window.location.href = "mailto:baslaworku@gmail.com";
+        }
     }
-  }
 };
 </script>
