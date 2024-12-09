@@ -14,10 +14,14 @@
         </div>
       </div>
       <div class="quote-container">
-      <p class="quote-text">
-        For ML, I have other Fav. tools. <br /> Check out my resume.
-      </p>
-    </div>
+        <p class="quote-text">
+          For ML, I have other Fav. tools.
+          <br />
+          <a class="resume-button" href="/Resume_Baslael Workineh.pdf" download="Resume_Baslael.pdf">
+            Check out my resume
+          </a>
+        </p>
+      </div>
     </div>
   </section>
 </template>
@@ -234,11 +238,25 @@ h2 {
   line-height: 1.6;
 }
 
-.quote-container:hover {
-  background: rgba(0, 209, 255, 0.15); /* Slightly increase opacity on hover */
-  border-left-color: #0084FF; /* Change border color on hover */
-  transform: scale(1.02); /* Add subtle scaling */
-  transition: all 0.3s ease-in-out;
+.resume-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: #00D1FF;
+  color: #141922;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.resume-button:hover {
+  background: #0084FF;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 209, 255, 0.5);
 }
 
 

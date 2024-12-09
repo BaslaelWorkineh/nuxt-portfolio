@@ -111,7 +111,7 @@ const projects = [
             "Responsive design"
         ],
         challenges: "Integrating a flexible CMS for content management.",
-        liveDemo: "https://habean-tech-sandy.vercel.app/#contact",
+        liveDemo: "https://habean-tech-sandy.vercel.app/",
         // github: "private"
     },
     {
