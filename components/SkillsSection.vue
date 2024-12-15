@@ -64,6 +64,10 @@ const techStack = [
     name: 'Django',
     icon: '/icons/django.svg',
   },
+  {
+    name: 'Nodejs',
+    icon: '/icons/nodejs.svg',
+  },
 ];
 </script>
 

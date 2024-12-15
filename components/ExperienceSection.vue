@@ -53,25 +53,31 @@ export default {
         organization: "JarsoAI",
         position: "Frontend Developer",
         startYear: "2022",
-        description: "Built scalable web solutions for schools.",
+        description: "Built scalable web solutions for schools and companies also collaborated on ML projects.",
       },
       {
         organization: "HelloHome",
         position: "Mobile Application Developer",
-        startYear: "2022",
-        description: "Built scalable mobile solutions for real estate.",
+        startYear: "2024",
+        description: "Built scalable mobile solution for the organization HelloHome located in Ethiopia.",
+      },
+      {
+        organization: "Google Developers Student Club",
+        position: "Event Organizer",
+        startYear: "2024",
+        description: "Organized the first GDSC Event on Addis Ababa University with other student developers.",
       },
       {
         organization: "SingularityNET",
         position: "Software Engineer",
         startYear: "2024",
-        description: "Developing Compoenents for AGI development.",
+        description: "Working to SingularityNET remotely through iCog-Labs. We are Developing Compoenents for AGI development.",
       },
       {
         organization: "iCog Labs",
-        position: "Software Engineer",
+        position: "Machine Learning Engineer",
         startYear: "2024",
-        description: "Working as a Software developer.",
+        description: "Currently employed as a Machine Learning Engineer at Icog Labs, responsible for designing and implementing machine learning solutions to solve complex problems.",
       },
     ]);
 
